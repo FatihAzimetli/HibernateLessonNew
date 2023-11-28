@@ -8,7 +8,7 @@ public class Student01 {
     @Id // bu artik primary key oldu
     private int id;
 
-    @Column(name = "student_name", length = 100, nullable = false, unique = false)
+    @Column(name = "student_name", length = 100, nullable = false, unique = true)
     private String name;//javaca konusuyorsak name yaziyoruz ancak sql,ce konusacaksak student_name kullanacagim
 
 
