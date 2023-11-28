@@ -8,16 +8,42 @@ import org.hibernate.cfg.Configuration;
 public class RunnerSave01 {
     public static void main(String[] args) {
         Student01 student1 = new Student01();
-
         student1.setId(1001);
         student1.setName("Fatma Ersöz");
         student1.setGrade(90);
+
+        // yeni bir girdi yapmak
+
+        Student01 student2 = new Student01();
+        student2.setId(1002);
+        student2.setName("Ömer Faruk Ekici");
+        student2.setGrade(90);
+
+        // yeni bir girdi yapmak
+
+        Student01 student3 = new Student01();
+        student3.setId(1003);
+        student3.setName("Mahmut Abbas");
+        student3.setGrade(96);
+
+        // yeni bir girdi yapmak
+
+        Student01 student4 = new Student01();
+        student4.setId(1004);
+        student4.setName("Aydin Yilmaz");
+        student4.setGrade(96);
+
+
+
         //hibernate konfigurasyon ve entity siniflarini gösterdik.
         Configuration con = new Configuration().configure("hibernate.cfg.xml").addAnnotatedClass(Student01.class);
         SessionFactory sf = con.buildSessionFactory();
         Session session = sf.openSession();
         Transaction tx = session.beginTransaction();
-        session.save(student1);
+       /* session.save(student1);
+        session.save(student2);
+        session.save(student3);
+        session.save(student4);*/
         tx.commit();
         session.close();
         sf.close();
