@@ -1,4 +1,4 @@
-package com.hd03.uni_direction;
+package com.hd03.uni_direction.OneToOne;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
